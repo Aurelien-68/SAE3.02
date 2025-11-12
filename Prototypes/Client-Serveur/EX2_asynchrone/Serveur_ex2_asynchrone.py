@@ -2,7 +2,7 @@ import socket
 import threading
 
 HOST = '0.0.0.0'
-PORT = 2000
+PORT = 10000
 
 
 def receive_messages(conn):

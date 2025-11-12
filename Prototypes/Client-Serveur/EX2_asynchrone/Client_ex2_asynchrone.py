@@ -2,7 +2,7 @@ import socket
 import threading
 
 HOST = '127.0.0.1'
-PORT = 2000
+PORT = 10000
 
 client_socket = socket.socket()
 client_socket.connect((HOST, PORT))
