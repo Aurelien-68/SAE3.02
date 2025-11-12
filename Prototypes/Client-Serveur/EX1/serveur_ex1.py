@@ -1,10 +1,10 @@
 import socket
 
-host ='127.0.0.1'
+host = '0.0.0.0'   # écoute sur toutes les interfaces
 port = 2000 #au dessus de 1000
 
 server_socket = socket.socket()
-server_socket.bind(('0.0.0.0', port))
+server_socket.bind((host, port))
 server_socket.listen(1)
 print(f"[SERVEUR] En écoute sur {host}:{port}")
 
