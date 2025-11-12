@@ -31,17 +31,22 @@ def handle_client(conn, addr):
     while True:
         reply = input(f"[SERVEUR {addr}] > ")
         if reply:
-            conn.send(reply.encode())
-            if reply.lower() == "bye":
-                print(f"[SERVEUR] Fermeture de la connexion avec {addr}")
+            try:
+                conn.send(reply.encode())
+                if reply.lower() == "bye":
+                    print(f"[SERVEUR] Fermeture de la connexion avec {addr}")
+                    conn.close()
+                    break
+                elif reply.lower() == "arret":
+                    print("[SERVEUR] Arrêt du serveur demandé.")
+                    conn.close()
+                    server_socket.close()
+                    exit(0)
+            except ConnectionResetError:
+                print(f"[SERVEUR] Impossible d'envoyer au client {addr} (déconnecté).")
                 conn.close()
                 break
-            elif reply.lower() == "arret":
-                print("[SERVEUR] Arrêt du serveur demandé.")
-                conn.close()
-                server_socket.close()
-                exit(0)
-    conn.close()
+
 
 server_socket = socket.socket()
 server_socket.bind((HOST, PORT))
