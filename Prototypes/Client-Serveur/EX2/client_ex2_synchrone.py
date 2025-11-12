@@ -11,7 +11,7 @@ while True:
     message = input("[CLIENT] > ")
     client_socket.send(message.encode())
 
-    if message.lower() in ("bye", "arret"):
+    if message == "bye" or message== "arret":
         print("[CLIENT] Déconnexion.")
         break
 
