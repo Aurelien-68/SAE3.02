@@ -1,0 +1,8 @@
+Client:
+    - Connexion et envoie de message
+    - Affichage message recu
+    - Route choisi (ex: R1->R3->R2)
+
+Master:
+    - Logs
+    - Distribution des clés
