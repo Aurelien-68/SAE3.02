@@ -72,7 +72,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", default="0.0.0.0")
-    parser.add_argument("--port", type=int, default=10000)
+    parser.add_argument("--port", type=int, default=20000)
     args = parser.parse_args()
 
     r = Router(args.host, args.port)
