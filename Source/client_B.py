@@ -1,4 +1,3 @@
-# client_B_gui.py
 import socket
 import json
 import threading

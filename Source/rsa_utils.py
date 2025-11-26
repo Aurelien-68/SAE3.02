@@ -10,7 +10,7 @@ from primes import PRIME_LIST
 def egcd(a, b):
     if a == 0:
         return b, 0, 1
-    g, x1, y1 = egcd(b % a, a)
+    g, x1, y1 = egcd(b % a, a) #algorithme d’Euclide étendu
     return g, y1 - (b // a) * x1, x1
 
 
