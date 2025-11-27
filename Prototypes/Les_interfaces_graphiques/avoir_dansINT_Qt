@@ -1,7 +1,11 @@
 Client:
+    - Au démmarage demander l'IP du serveur Master et son port
     - Connexion et envoie de message
     - Affichage message recu
+    - Routeurs enregistés
     - Route choisi (ex: R1->R3->R2)
+    - Sélections des routeur a passer (cocher les routeurs que l'on veut utiliser)
+    - Entrer l'IP du Client a qui on veut envoyer
 
 Master:
     - Logs
