@@ -28,7 +28,5 @@ def lire_fichier(nom_fichier):
             f.close()
         print("Fin du programme.")
 
-
-
 nom = input("Nom du fichier à lire : ")
 lire_fichier(nom)
