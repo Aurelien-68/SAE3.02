@@ -1,0 +1,12 @@
+1. Ce code fait une division entière par soustraction répétée.
+On enlève y à x tant que possible.
+On compte combien de fois on a retiré y.
+
+2.
+Exemple :
+x = 10, y = 3
+10 - 3 = 7  → 1
+7 - 3 = 4   → 2
+4 - 3 = 1   → 3
+1 < 3 donc renvoie 0
+Résultat total : 3
