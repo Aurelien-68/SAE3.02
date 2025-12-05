@@ -12,7 +12,7 @@ python router.py -m IP_MASTER:PORT_MASTER -p MON_PORT
 
 python client.py -m IP_MASTER:PORT_MASTER -p MON_PORT
 
-Repertoires:  
+ARBORESCENCE DU PROJET:  
 SAE3.02  
 &nbsp;&nbsp;&nbsp;&nbsp;|   
 &nbsp;&nbsp;&nbsp;&nbsp;|_Prototypes  
@@ -24,3 +24,9 @@ SAE3.02
 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|_rsa_utils.py  
 &nbsp;&nbsp;&nbsp;&nbsp;|  
 &nbsp;&nbsp;&nbsp;&nbsp;|_Documentations
+
+DOCUMENTATIONS:  
+Documentation utilisateur:  
+Documentation d'instalation:  
+Document de réponse:  
+LIEN DE LA VIDEO:  
