@@ -5,18 +5,20 @@ Membres du groupe:
     - HALTER Mathis
 
 Description du projet:  
-&nbsp;&nbsp;&nbsp;&nbsp;Ce projet implemente un systeme de routage en oignon. Le systeme se compose d'un Master qui vas recuperer et envoyer les clés publiques, il y a egalement des routeurs virtuels et des clients qui pouront envoyer des messages en plusieurs couches de chiffrement pour garantir l'anonymat.
+&nbsp;&nbsp;&nbsp;&nbsp;Ce projet implémente un système de routage en oignon. Le système se compose d'un Master qui vas récupérer et envoyer les clés publiques, il y a également des routeurs virtuels et des clients qui pourront envoyer des messages en plusieurs couches de chiffrement pour garantir l'anonymat.
 
-Fonctionalités:  
+Fonctionnalités:  
 &nbsp;&nbsp;&nbsp;&nbsp;- Routage multi-sauts avec sockets Python  
 &nbsp;&nbsp;&nbsp;&nbsp;- Gestion multithread des connexions  
 &nbsp;&nbsp;&nbsp;&nbsp;- Chiffrement asymétrique (clé publique/privée simplifiée)  
 &nbsp;&nbsp;&nbsp;&nbsp;- Anonymisation par couches (routage en oignon)  
 &nbsp;&nbsp;&nbsp;&nbsp;- Base de données MariaDB (clés, tables de routage)  
-&nbsp;&nbsp;&nbsp;&nbsp;- Interface Qt (visualisation des connexions, statistiques,client)  
+&nbsp;&nbsp;&nbsp;&nbsp;- Interface Qt (visualisation des connexions, statistiques, client)  
 
+Librairies utilisées:  
+&nbsp;&nbsp;&nbsp;&nbsp;- 
 
-Commandes pour lancement des different programme:
+Commandes pour lancement des différents programme:
 
 python master.py -p MON_PORT
 
@@ -39,7 +41,8 @@ SAE3.02
 
 DOCUMENTATIONS:  
 Documentation utilisateur:  
-Documentation d'instalation:  
+Documentation d'installation:  
 Document de réponse: 
 
 LIEN DE LA VIDEO:  
+
