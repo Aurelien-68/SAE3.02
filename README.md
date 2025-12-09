@@ -14,12 +14,6 @@ Fonctionalités:
 &nbsp;&nbsp;&nbsp;&nbsp;- Anonymisation par couches (routage en oignon)  
 &nbsp;&nbsp;&nbsp;&nbsp;- Base de données MariaDB (clés, tables de routage)  
 &nbsp;&nbsp;&nbsp;&nbsp;- Interface Qt (visualisation des connexions, statistiques,client)  
-  
-
-
-
-
-
 
 
 Commandes pour lancement des different programme:
