@@ -4,7 +4,25 @@ Membres du groupe:
     - HENRY Aurelien  
     - HALTER Mathis
 
-Commandes pour lancement des different programme:  
+Description du projet:  
+&nbsp;&nbsp;&nbsp;&nbsp;Ce projet implemente un systeme de routage en oignon. Le systeme se compose d'un Master qui vas recuperer et envoyer les clés publiques, il y a egalement des routeurs virtuels et des clients qui pouront envoyer des messages en plusieurs couches de chiffrement pour garantir l'anonymat.
+
+Fonctionalités:  
+&nbsp;&nbsp;&nbsp;&nbsp;- Routage multi-sauts avec sockets Python  
+&nbsp;&nbsp;&nbsp;&nbsp;- Gestion multithread des connexions  
+&nbsp;&nbsp;&nbsp;&nbsp;- Chiffrement asymétrique (clé publique/privée simplifiée)  
+&nbsp;&nbsp;&nbsp;&nbsp;- Anonymisation par couches (routage en oignon)  
+&nbsp;&nbsp;&nbsp;&nbsp;- Base de données MariaDB (clés, tables de routage)  
+&nbsp;&nbsp;&nbsp;&nbsp;- Interface Qt (visualisation des connexions, statistiques,client)  
+  
+
+
+
+
+
+
+
+Commandes pour lancement des different programme:
 
 python master.py -p MON_PORT
 
