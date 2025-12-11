@@ -53,5 +53,5 @@ DOCUMENTATIONS:
 &nbsp;&nbsp;&nbsp;&nbsp;Documentation d'installation:  
 &nbsp;&nbsp;&nbsp;&nbsp;Document de réponse: 
 
-LIEN DE LA VIDEO:  
+LIEN DE LA VIDEO DE PRESENTATION DU PROJET:  
 
