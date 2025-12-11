@@ -22,9 +22,9 @@ Commandes pour lancement des différents programme:
 
 python master.py -p MON_PORT
 
-python router.py -m IP_MASTER:PORT_MASTER -p MON_PORT
+python router.py -n IP_MASTER:PORT_MASTER -p MON_PORT
 
-python client.py -m IP_MASTER:PORT_MASTER -p MON_PORT
+python client.py -n IP_MASTER:PORT_MASTER -p MON_PORT
 
 ARBORESCENCE DU PROJET:  
 SAE3.02  
