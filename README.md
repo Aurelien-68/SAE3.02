@@ -8,6 +8,7 @@ Description du projet:
 &nbsp;&nbsp;&nbsp;&nbsp;Ce projet implémente un système de routage en oignon. Le système se compose d'un Master qui vas récupérer et envoyer les clés publiques, il y a également des routeurs virtuels et des clients qui pourront envoyer des messages en plusieurs couches de chiffrement pour garantir l'anonymat.
 
 Fonctionnalités:  
+
 &nbsp;&nbsp;&nbsp;&nbsp;- Routage multi-sauts avec sockets Python  
 &nbsp;&nbsp;&nbsp;&nbsp;- Gestion multithread des connexions  
 &nbsp;&nbsp;&nbsp;&nbsp;- Chiffrement asymétrique (clé publique/privée simplifiée)  
@@ -16,7 +17,14 @@ Fonctionnalités:
 &nbsp;&nbsp;&nbsp;&nbsp;- Interface Qt (visualisation des connexions, statistiques, client)  
 
 Librairies utilisées:  
-&nbsp;&nbsp;&nbsp;&nbsp;- 
+&nbsp;&nbsp;&nbsp;&nbsp;- random  
+&nbsp;&nbsp;&nbsp;&nbsp;- math  
+&nbsp;&nbsp;&nbsp;&nbsp;- socket  
+&nbsp;&nbsp;&nbsp;&nbsp;- threading  
+&nbsp;&nbsp;&nbsp;&nbsp;- time  
+&nbsp;&nbsp;&nbsp;&nbsp;- sys  
+
+
 
 Commandes pour lancement des différents programme:
 
