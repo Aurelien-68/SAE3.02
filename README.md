@@ -26,7 +26,7 @@ Librairies utilisées:
 
 
 
-Commandes pour lancement des différents programme:
+Commandes pour lancement des différents programmes:
 
 python master.py -p MON_PORT
 
