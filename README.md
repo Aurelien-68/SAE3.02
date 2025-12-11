@@ -28,13 +28,14 @@ Librairies utilisées:
 
 Commandes pour lancement des différents programmes:
 
-python master.py -p MON_PORT
+&nbsp;&nbsp;&nbsp;&nbsp;python master.py -p MON_PORT
 
-python router.py -n IP_MASTER:PORT_MASTER -p MON_PORT
+&nbsp;&nbsp;&nbsp;&nbsp;python router.py -n IP_MASTER:PORT_MASTER -p MON_PORT
 
-python client.py -n IP_MASTER:PORT_MASTER -p MON_PORT
+&nbsp;&nbsp;&nbsp;&nbsp;python client.py -n IP_MASTER:PORT_MASTER -p MON_PORT
 
 ARBORESCENCE DU PROJET:  
+
 SAE3.02  
 &nbsp;&nbsp;&nbsp;&nbsp;|   
 &nbsp;&nbsp;&nbsp;&nbsp;|_Prototypes  
@@ -48,9 +49,9 @@ SAE3.02
 &nbsp;&nbsp;&nbsp;&nbsp;|_Documentations
 
 DOCUMENTATIONS:  
-Documentation utilisateur:  
-Documentation d'installation:  
-Document de réponse: 
+&nbsp;&nbsp;&nbsp;&nbsp;Documentation utilisateur:  
+&nbsp;&nbsp;&nbsp;&nbsp;Documentation d'installation:  
+&nbsp;&nbsp;&nbsp;&nbsp;Document de réponse: 
 
 LIEN DE LA VIDEO:  
 
