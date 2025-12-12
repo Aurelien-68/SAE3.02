@@ -49,7 +49,7 @@ SAE3.02
 &nbsp;&nbsp;&nbsp;&nbsp;|_Documentations
 
 DOCUMENTATIONS:  
-&nbsp;&nbsp;&nbsp;&nbsp;Documentation d'installation:  
+&nbsp;&nbsp;&nbsp;&nbsp;Documentation d'installation:  \Documentations\Document_installation
 &nbsp;&nbsp;&nbsp;&nbsp;Documentation utilisateur:  
 &nbsp;&nbsp;&nbsp;&nbsp;Document de réponse: 
 
