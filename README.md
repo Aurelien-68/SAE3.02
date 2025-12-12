@@ -30,9 +30,9 @@ Commandes pour lancement des différents programmes:
 
 &nbsp;&nbsp;&nbsp;&nbsp;python master.py -p MON_PORT
 
-&nbsp;&nbsp;&nbsp;&nbsp;python router.py -n IP_MASTER:PORT_MASTER -p MON_PORT
+&nbsp;&nbsp;&nbsp;&nbsp;python router.py -n IP_DU_MASTER:PORT_DU_MASTER -p MON_PORT
 
-&nbsp;&nbsp;&nbsp;&nbsp;python client.py -n IP_MASTER:PORT_MASTER -p MON_PORT
+&nbsp;&nbsp;&nbsp;&nbsp;python client.py -n IP_DU_MASTER:PORT_DU_MASTER -p MON_PORT
 
 ARBORESCENCE DU PROJET:  
 
