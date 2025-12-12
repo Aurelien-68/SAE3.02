@@ -49,8 +49,8 @@ SAE3.02
 &nbsp;&nbsp;&nbsp;&nbsp;|_Documentations
 
 DOCUMENTATIONS:  
-&nbsp;&nbsp;&nbsp;&nbsp;Documentation utilisateur:  
 &nbsp;&nbsp;&nbsp;&nbsp;Documentation d'installation:  
+&nbsp;&nbsp;&nbsp;&nbsp;Documentation utilisateur:  
 &nbsp;&nbsp;&nbsp;&nbsp;Document de réponse: 
 
 LIEN DE LA VIDEO DE DEMONSTRATION DU PROJET:  
