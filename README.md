@@ -51,7 +51,7 @@ SAE3.02
 DOCUMENTATIONS:  
 &nbsp;&nbsp;&nbsp;&nbsp;Documentation d'installation:  \Documentations\Document_installation
 &nbsp;&nbsp;&nbsp;&nbsp;Documentation utilisateur:  \Documentations\Document_utilisation
-&nbsp;&nbsp;&nbsp;&nbsp;Document de réponse: \Documentations\Document_reponse
+&nbsp;&nbsp;&nbsp;&nbsp;Document de réponse: \Documentations\Document_réponse
 
 LIEN DE LA VIDEO DE DEMONSTRATION DU PROJET:  
 
