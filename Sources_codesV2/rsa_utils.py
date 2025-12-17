@@ -1,7 +1,7 @@
 # rsa_utils.py
 from random import choice
 from math import gcd
-from primes import PRIME_LIST
+from Sources_codesV2.primes import PRIME_LIST
 
 
 def egcd(a, b):

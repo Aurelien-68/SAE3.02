@@ -3,7 +3,7 @@ import socket
 import threading
 
 from rsa_utils import rsa_decrypt_bytes, cipher_from_str
-from onion_format import parse_layer
+from Sources_codesV2.onion_format import parse_layer
 
 BUF = 4096
 ENC = "utf-8"
