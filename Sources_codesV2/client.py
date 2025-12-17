@@ -1,4 +1,4 @@
-# client.py
+
 import socket
 import threading
 import random
@@ -153,7 +153,7 @@ class ClientWindow(QMainWindow):
         self.emitter = LogEmitter()
         self.emitter.log.connect(self.append_log)
 
-        # ---------- UI ----------
+        # UI
         central = QWidget()
         self.setCentralWidget(central)
         main_layout = QVBoxLayout(central)

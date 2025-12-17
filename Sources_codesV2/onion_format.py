@@ -1,4 +1,4 @@
-# onion_format.py
+
 
 def make_final_layer(ip, port, message):
     # F|ip|port|message

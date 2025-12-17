@@ -1,4 +1,3 @@
-# rsa_utils.py
 from random import choice
 from math import gcd
 from Sources_codesV2.primes import PRIME_LIST
