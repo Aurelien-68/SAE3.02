@@ -17,7 +17,6 @@ from onion_format import make_final_layer, make_route_layer
 ENC = "utf-8"
 
 
-# ================== PARSE DES ARGUMENTS CLI ==================
 
 def parse_args():
     """
@@ -65,7 +64,6 @@ def parse_args():
     return master_ip, master_port, local_port
 
 
-# ================== OUTILS MASTER / ONION ==================
 
 def get_router_list(master_ip, master_port):
     """
@@ -131,13 +129,11 @@ def build_onion_for_message(message, dest_ip, dest_port, routers_selected, hops)
     return first["ip"], first["port"], inner.encode(ENC), path
 
 
-# ================== LOGS POUR QT ==================
 
 class LogEmitter(QObject):
     log = pyqtSignal(str)
 
 
-# ================== FENÊTRE PRINCIPALE CLIENT ==================
 
 class ClientWindow(QMainWindow):
     def __init__(self, master_ip, master_port, local_port):
@@ -236,20 +232,20 @@ class ClientWindow(QMainWindow):
         self.log_view.setReadOnly(True)
         main_layout.addWidget(self.log_view)
 
-        # ---------- Thread d'écoute ----------
+        # Thread d'écoute
         t = threading.Thread(target=self.listen_loop, daemon=True)
         t.start()
         self.log("[INFO] Client en écoute sur %s:%d" %
                  (self.listen_ip, self.listen_port))
 
-    # ---------- Logs ----------
+    #  Logs
     def log(self, text):
         self.emitter.log.emit(text)
 
     def append_log(self, text):
         self.log_view.append(text)
 
-    # ---------- Écoute des messages ----------
+    # Écoute des messages
     def listen_loop(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((self.listen_ip, self.listen_port))
@@ -264,7 +260,7 @@ class ClientWindow(QMainWindow):
                 self.log("[RECV] Message de %s : %s" % (addr, msg))
             conn.close()
 
-    # ---------- Rafraîchir la liste des routeurs ----------
+    #  Rafraîchir la liste des routeurs
     def refresh_routers(self):
         master_ip = self.master_ip_edit.text().strip()
         master_port = self.master_port_spin.value()
@@ -303,7 +299,7 @@ class ClientWindow(QMainWindow):
         self.log("[INFO] %d routeurs chargés depuis %s:%d." %
                  (len(routers), master_ip, master_port))
 
-    # ---------- Envoi du message ----------
+    #  Envoi du message
     def send_message(self):
         msg = self.msg_edit.text().strip()
         if not msg:
@@ -350,7 +346,7 @@ class ClientWindow(QMainWindow):
             self.log("[ERR] Envoi impossible : %s" % e)
 
 
-# ================== MAIN ==================
+# MAIN
 
 def main():
     master_ip, master_port, local_port = parse_args()
