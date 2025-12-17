@@ -48,7 +48,6 @@ def build_onion(path, message, final_ip, final_port):
         }
     return layer
 
-
 # =============== Objet pour remonter les logs =================
 
 class LogEmitter(QObject):
