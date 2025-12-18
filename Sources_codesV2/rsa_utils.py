@@ -1,6 +1,6 @@
 from random import choice
 from math import gcd
-from Sources_codesV2.primes import PRIME_LIST
+from primes import PRIME_LIST
 
 
 def egcd(a, b):

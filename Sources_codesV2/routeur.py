@@ -4,7 +4,7 @@ import time
 import sys
 
 from rsa_utils import generate_keypair
-from Sources_codesV2.router_core import RouterOnion
+from router_core import RouterOnion
 
 ENC = "utf-8"
 
