@@ -28,7 +28,7 @@ Librairies utilisées:
 
 Commandes pour lancement des différents programmes:
 
-&nbsp;&nbsp;&nbsp;&nbsp;python master.py -p MON_PORT
+&nbsp;&nbsp;&nbsp;&nbsp; python master.py -p MON_PORT --db-user NOM_USER --db-pass MDP_DE_LA_DB
 
 &nbsp;&nbsp;&nbsp;&nbsp;python router.py -n IP_DU_MASTER:PORT_DU_MASTER -p MON_PORT
 
