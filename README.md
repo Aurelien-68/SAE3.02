@@ -23,7 +23,8 @@ Librairies utilisées:
 &nbsp;&nbsp;&nbsp;&nbsp;- threading  
 &nbsp;&nbsp;&nbsp;&nbsp;- time  
 &nbsp;&nbsp;&nbsp;&nbsp;- sys  
-
+&nbsp;&nbsp;&nbsp;&nbsp;- PyQt5  
+&nbsp;&nbsp;&nbsp;&nbsp;- mysql.connector  
 
 
 Commandes pour lancement des différents programmes:
