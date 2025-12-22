@@ -32,22 +32,25 @@ def run(cmd):
 
 # ---------- LINUX ----------
 def install_linux():
-    print("\033[1;32m[+] OS détecté : Linux (APT + pip)\033[0m\n")
+    print("\033[1;32m[+] OS détecté : Linux (APT + pip forcé)\033[0m\n")
 
     run(["sudo", "apt", "update"])
 
-    # PyQt5 via apt
+    # Paquets système
     run([
         "sudo", "apt", "install", "-y",
         "python3-pyqt5",
         "python3-pip"
     ])
 
-    # MySQL connector via pip
+    # MySQL connector via pip (PEP 668 contourné)
     run([
         sys.executable, "-m", "pip",
-        "install", "--user", "mysql-connector-python"
+        "install",
+        "--break-system-packages",
+        "mysql-connector-python"
     ])
+
 
 
 
