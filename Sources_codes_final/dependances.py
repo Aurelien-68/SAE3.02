@@ -30,15 +30,25 @@ def run(cmd):
     subprocess.run(cmd, check=True)
 
 
-# ---------- LINUX (Debian / Ubuntu) ----------
+# ---------- LINUX ----------
 def install_linux():
-    print("\033[1;32m[+] OS détecté : Linux (APT)\033[0m\n")
+    print("\033[1;32m[+] OS détecté : Linux (APT + pip)\033[0m\n")
+
     run(["sudo", "apt", "update"])
+
+    # PyQt5 via apt
     run([
         "sudo", "apt", "install", "-y",
         "python3-pyqt5",
-        "python3-mysql.connector"
+        "python3-pip"
     ])
+
+    # MySQL connector via pip
+    run([
+        sys.executable, "-m", "pip",
+        "install", "--user", "mysql-connector-python"
+    ])
+
 
 
 # ---------- WINDOWS ----------
