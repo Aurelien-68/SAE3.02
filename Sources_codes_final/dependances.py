@@ -30,7 +30,7 @@ def run(cmd):
     subprocess.run(cmd, check=True)
 
 
-# ---------- LINUX ----------
+# Installation des dépendances sous Linux
 def install_linux():
     print("\033[1;32m[+] OS détecté : Linux (APT + pip forcé)\033[0m\n")
 
@@ -54,7 +54,7 @@ def install_linux():
 
 
 
-# ---------- WINDOWS ----------
+# Installation des dépendances sous Windows
 def install_windows():
     print("\033[1;32m[+] OS détecté : Windows (pip)\033[0m\n")
     pip = [sys.executable, "-m", "pip"]
@@ -62,7 +62,7 @@ def install_windows():
     run(pip + ["install", "PyQt5", "mysql-connector-python"])
 
 
-# ---------- macOS ----------
+# Installation des dépendances sous macOS
 def install_macos():
     print("\033[1;32m[+] OS détecté : macOS (Homebrew)\033[0m\n")
 
@@ -75,7 +75,7 @@ def install_macos():
     run(["brew", "install", "pyqt"])
     run(["brew", "install", "mysql-connector-python"])
 
-
+# Fonction principale d'installation
 def install_dependencies():
     banner()
     system = platform.system()
@@ -87,7 +87,7 @@ def install_dependencies():
     elif system == "Darwin":
         install_macos()
     else:
-        print(f"❌ OS non supporté : {system}")
+        print(f"[X] OS non supporté : {system}")
         sys.exit(1)
 
     print("\n\033[1;32m[✓] Dépendances installées avec succès.\033[0m")

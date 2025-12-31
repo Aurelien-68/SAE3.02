@@ -13,6 +13,7 @@ from PyQt5.QtCore import pyqtSignal, QObject
 ENC = "utf-8"
 BUF = 8192
 
+# Analyse des arguments de ligne de commande
 def parse_cli(argv):
     """
     Supporte:
@@ -84,6 +85,7 @@ def print_usage_and_exit():
     print("  --db-pass         Mot de passe DB (obligatoire)")
     sys.exit(0)
 
+# Fonctions d'accès à la base de données
 def db_connect(cfg, with_db):
     params = {
         "host": cfg["db_host"],
@@ -102,12 +104,14 @@ def db_ensure_ready(cfg):
     Crée la base + la table nodes si besoin.
     NOTE: l'utilisateur DB doit avoir les droits CREATE DATABASE et CREATE TABLE.
     """
+    # Création de la DB
     conn = db_connect(cfg, with_db=False)
     cur = conn.cursor()
     cur.execute(f"CREATE DATABASE IF NOT EXISTS {cfg['db_name']}")
     cur.close()
     conn.close()
-    
+
+    # Création de la table
     conn = db_connect(cfg, with_db=True)
     cur = conn.cursor()
     cur.execute("""

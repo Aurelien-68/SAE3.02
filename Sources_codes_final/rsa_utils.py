@@ -1,8 +1,9 @@
-# rsa_utils.py
+
 from random import choice
 from math import gcd
 from primes import PRIME_LIST
 
+# Fonctions utilitaires pour RSA
 
 def egcd(a, b):
     if a == 0:

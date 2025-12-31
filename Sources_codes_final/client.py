@@ -51,17 +51,19 @@ def parse_args():
         else:
             i += 1
 
+    # Vérification de la validité des paramètres
     if master_ip is None or master_port is None or local_port is None:
         print("Usage : python client.py -n IP_MASTER:PORT_MASTER -p PORT_CLIENT")
         sys.exit(1)
 
+    # Correction si le master est sur la machine locale
     if master_ip == "0.0.0.0":
         print("IP master 0.0.0.0 reçue → utilisation de 127.0.0.1 pour la connexion.")
         master_ip = "127.0.0.1"
 
     return master_ip, master_port, local_port
 
-
+# Récupération de la liste des routeurs depuis le master
 def get_router_list(master_ip, master_port):
     """
     Retourne une liste de dicts {name, ip, port, pubkey:(e,n)}
@@ -104,7 +106,7 @@ def get_router_list(master_ip, master_port):
         })
     return routers
 
-
+# Construction du message en routage "oignon"
 def build_onion_for_message(message, dest_ip, dest_port, routers_selected, hops):
     """
     Choisit au hasard 'hops' routeurs dans routers_selected,
@@ -113,18 +115,24 @@ def build_onion_for_message(message, dest_ip, dest_port, routers_selected, hops)
     if hops > len(routers_selected):
         raise ValueError("Pas assez de routeurs cochés pour ce nombre de sauts")
 
+    # Sélection aléatoire du chemin
     path = random.sample(routers_selected, hops)
 
+    # Couche finale : message + destination
     inner = make_final_layer(dest_ip, dest_port, message)
 
+    # Construction des couches successives (en partant du dernier routeur)
     for r in reversed(path):
+        # Chiffrement RSA avec la clé publique du routeur
         cipher_list = rsa_encrypt_bytes(inner.encode(ENC), r["pubkey"])
         cipher_str = cipher_to_str(cipher_list)
+        # Création de la couche contenant l'adresse du prochain saut
         inner = make_route_layer(r["ip"], r["port"], cipher_str)
 
     first = path[0]
     return first["ip"], first["port"], inner.encode(ENC), path
 
+# Enregistrement du client auprès du master
 def register_client_to_master(master_ip, master_port, client_name, client_ip, client_port):
     """
     Envoie au master : CLIENT|name|ip|port
